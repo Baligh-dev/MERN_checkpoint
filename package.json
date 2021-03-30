@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server"
+    "back": "nodemon server",
+    "front": "cd client && npm start",
+    "dev": "concurrently \"npm run front\" \"npm run back\""
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "mongoose": "^5.12.2"
   },
   "devDependencies": {
+    "concurrently": "^6.0.0",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.7"
   }
